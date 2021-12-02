@@ -6,9 +6,9 @@
 (defn checkNextInc [prev list result]
   (if (empty? list)
     result
-    (if (> prev (first list))                               ;;
+    (if (> prev (first list))
       (checkNextInc (first list) (rest list) (inc result))
       (checkNextInc (first list) (rest list) result)))
   )
 
-(print (checkNextInc 0 '(3 4 2 1) 0))
+(print (checkNextInc 0 input 0))
