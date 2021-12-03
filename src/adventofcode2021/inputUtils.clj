@@ -5,6 +5,11 @@
 
     (reduce conj () (line-seq reader) )))
 
+
+(defn stringToCharVector [inputString]
+  (seq (char-array inputString))
+  )
+
 (defn getMapFromFile [fileName]
   (
     with-open [reader (clojure.java.io/reader fileName)]
